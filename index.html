@@ -11,7 +11,7 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fc;
+            background-color: #fbfbfb;
             color: #333;
             scroll-behavior: smooth;
         }
@@ -21,18 +21,18 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            background: linear-gradient(135deg, #0056b3, #0099ff);
-            color: white;
+            background-color: #fff;
+            color: #333;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 0.2px solid gray;
+            border-bottom: 1px solid #0056b3;
         }
 
         nav .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #ffffff;
+            color: #394dd5;
         }
 
         nav ul {
@@ -48,13 +48,13 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #595555;
             font-weight: 500;
             transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: #ff6b81;
+            color: #1c0460;
         }
 
         .hamburger {
@@ -64,7 +64,7 @@
         }
 
         .hamburger span {
-            background: white;
+            background: rgb(102, 8, 8);
             height: 3px;
             width: 30px;
             margin: 4px;
@@ -73,7 +73,7 @@
         .menu-links-mobile {
             display: none;
             flex-direction: column;
-            background: #333;
+            background: #fff;
             width: 100%;
             position: absolute;
             top: 100%;
@@ -84,28 +84,41 @@
             padding: 1rem;
             text-align: center;
             text-decoration: none;
-            color: #fff;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            font-size: 1.2rem;
+            display: block;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+            background-color: #f7f7f7;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .menu-links-mobile a:hover {
-            background-color: #ff6b81;
+            background-color: #3b12e1;
+            color: #fff;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
+
 
         .show {
             display: flex !important;
         }
 
         #hero {
-            background: linear-gradient(135deg, #0056b3, #0099ff);
-            color: white;
+            color: #333;
             text-align: center;
-            padding: 4rem 2rem;
+            background-color: #f4f7fa;
         }
 
         #hero h1 {
-            font-size: 2.8rem;
+            text-align: center;
+            font-size: 3.8rem;
             font-weight: 700;
             margin-bottom: 1rem;
+            color: #384cd2;
         }
 
         #hero p {
@@ -115,8 +128,8 @@
 
         #hero a {
             display: inline-block;
-            background: #ff6b81;
-            color: white;
+            background: #384cd2;
+            color: #fff;
             padding: 0.75rem 1.5rem;
             border-radius: 5px;
             text-decoration: none;
@@ -127,12 +140,11 @@
 
         #hero a:hover {
             transform: scale(1.1);
-            background: #ff4757;
+            background: #4b5eda;
         }
 
         section {
-            margin: 2rem auto;
-            max-width: 1000px;
+
             padding: 2rem;
             background: white;
             border-radius: 10px;
@@ -144,6 +156,12 @@
             color: #0056b3;
             margin-bottom: 1rem;
         }
+
+        .feature img {
+            width: 60px;
+            margin-bottom: 1rem;
+        }
+
 
         .features {
             display: flex;
@@ -180,12 +198,11 @@
         #contact {
             text-align: center;
             padding: 2rem;
-            background: linear-gradient(135deg, #0099ff, #0056b3);
-            color: white;
+            background: linear-gradient(135deg, #fff, #dde1e5);
+            color: #333;
             border-radius: 10px;
             margin: 2rem auto;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            max-width: 800px;
         }
 
         #contact h2 {
@@ -197,7 +214,7 @@
         #contact p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
-            color: #e6e6e6;
+            color: #363580;
         }
 
         #contact div {
@@ -215,7 +232,7 @@
             font-weight: 500;
             border-radius: 50px;
             background: #ff6b81;
-            color: white;
+            color: #333;
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
         }
@@ -259,15 +276,302 @@
         }
 
 
-        footer {
-            background: #333;
-            color: white;
+        #pricing {
             text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
+            padding: 2rem;
+            background-color: #f4f7fa;
+            color: #333;
+            border-radius: 10px;
+            margin: 2rem auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
+        #pricing h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #384cd2;
+        }
+
+        #pricing p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #363580;
+        }
+
+        .pricing-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .pricing-card {
+            flex: 1 1 300px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            color: #0056b3;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card .price {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #384cd2;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .pricing-card ul li {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card a.btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            border-radius: 50px;
+            background: #384cd2;
+            color: #fff;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card a.btn:hover {
+            transform: translateY(-5px);
+            background: #4b5eda;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .pricing-card.popular {
+            border: 2px solid #384cd2;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .pricing-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #faq {
+            padding: 2rem;
+            text-align: center;
+            background-color: #f9f9f9;
+            color: #333;
+            border-radius: 10px;
+            margin: 2rem auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #faq h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #384cd2;
+        }
+
+        #faq p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #363580;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            border: none;
+            background: #f4f7fa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: #e8eefc;
+            color: #384cd2;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: #384cd2;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1rem;
+            background: #fff;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .faq-answer.open {
+            max-height: 200px;
+            padding: 1rem;
+        }
+
+        .faq-item .faq-question:focus {
+            outline: none;
+        }
+
+
+        #advanced-footer {
+            background-color: #1e1e2f;
+            color: #ddd;
+            padding: 2rem 1rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-container>div {
+            flex: 1 1 200px;
+            margin: 1rem;
+        }
+
+        .footer-about p {
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links ul li {
+            margin: 0.5rem 0;
+        }
+
+        .footer-links ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links ul li a:hover {
+            color: #ffd700;
+        }
+
+        .footer-contact p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-contact a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-newsletter form {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        .footer-newsletter input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #555;
+            border-radius: 4px 0 0 4px;
+            background: #2c2c3e;
+            color: #ddd;
+        }
+
+        .footer-newsletter button {
+            padding: 0.5rem 1rem;
+            border: none;
+            background-color: #384cd2;
+            color: #fff;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-newsletter button:hover {
+            background-color: #4f6bed;
+        }
+
+        .footer-newsletter p {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+        }
+
+        .social-icons a {
+            color: #ddd;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ffd700;
+        }
+
+
+
         @media (max-width: 768px) {
+
+
+
             nav ul {
                 display: none;
             }
@@ -280,6 +584,30 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            .pricing-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+            #faq h2 {
+                font-size: 2rem;
+            }
+
+            .faq-question {
+                font-size: 1.1rem;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-container>div {
+                margin: 1rem auto;
+            }
+
         }
     </style>
 </head>
@@ -296,11 +624,19 @@
             <li><a href="#hero">Home</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#social">Social Proof</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#benefit">Benefits</a></li>
+            <li><a href="#contact">How it Works</a></li>
+
         </ul>
         <div class="menu-links-mobile">
             <a href="#hero">Home</a>
             <a href="#features">Features</a>
             <a href="#contact">Contact</a>
+            <a href="#social">Social Proof</a>
+            <a href="#benefit">Benefits</a>
+            <a href="#contact">How it Works</a>
         </div>
     </nav>
 
@@ -341,6 +677,48 @@
         </div>
     </section>
 
+
+    <section id="pricing">
+        <h2>Our Pricing Plans</h2>
+        <p>Choose a plan that fits your school's needs. Flexible pricing for every stage of growth.</p>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <h3>Starter Pack</h3>
+                <p class="price">ETB 15,000</p>
+                <ul>
+                    <li>Basic Student and Teacher Management</li>
+                    <li>Attendance Tracking</li>
+                    <li>3 Months Support</li>
+                </ul>
+                <a href="#contact" class="btn">Get Started</a>
+            </div>
+            <div class="pricing-card popular">
+                <h3>Growth Package</h3>
+                <p class="price">ETB 30,000</p>
+                <ul>
+                    <li>Full Student/Teacher Management</li>
+                    <li>Grade Tracking</li>
+                    <li>Basic Reporting</li>
+                    <li>6 Months Support</li>
+                </ul>
+                <a href="#contact" class="btn">Get Started</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise Solutions</h3>
+                <p class="price">Custom</p>
+                <ul>
+                    <li>Comprehensive School Management</li>
+                    <li>Advanced Analytics</li>
+                    <li>Custom Integrations</li>
+                    <li>Dedicated Support</li>
+                </ul>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+
+
     <section id="contact">
         <h2>Contact Us</h2>
         <p>We are here to assist you! Reach out through any of the platforms below:</p>
@@ -351,15 +729,142 @@
         </div>
     </section>
 
-    
-    <footer>
-        <p>&copy; 2024 School Management System. All rights reserved.</p>
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p>Here are some answers to the questions we get asked the most.</p>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    What is Venus Online Software Training?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    Venus Online Software Training provides comprehensive software solutions for school management,
+                    including student tracking, teacher management, and analytics tools.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is the software customizable for different schools?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    Yes, our software can be tailored to meet the specific needs of any school, including integrations
+                    and additional features.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    What kind of support is provided after purchase?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    We offer ongoing support, including technical assistance, training sessions, and updates for the
+                    duration of your support plan.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    How secure is the data stored in the software?
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    Data security is a top priority. Our software uses advanced encryption and secure servers to ensure
+                    your data is safe.
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer id="advanced-footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>Venus School Management System is dedicated to revolutionizing school operations with cutting-edge
+                    software solutions that simplify management and enhance learning outcomes.</p>
+                <p>&copy; 2024 Venus School Management System. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a
+                        href="mailto:info@venus-online-software-training.com">info@venus-online-software-training.com</a>
+                </p>
+                <p>Phone: <a href="tel:+1234567890">+251 94 065 1252</a></p>
+                <p>Address: Ethiopia, Tigray, Mekelle</p>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p>Stay updated with the latest news and offers from Venus School Management System.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Follow us on:</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
+
 
     <script>
         function toggleMenu() {
             document.querySelector('.menu-links-mobile').classList.toggle('show');
         }
+
+        // Close menu when a menu link is clicked
+        const menuLinks = document.querySelectorAll('.menu-links-mobile a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.menu-links-mobile').classList.remove('show');
+            });
+        });
+
+        // Automatically hide the mobile menu on screen resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                document.querySelector('.menu-links-mobile').classList.remove('show');
+            }
+        });
+
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const isOpen = answer.classList.contains('open');
+
+                // Close all other answers
+                document.querySelectorAll('.faq-answer').forEach(item => {
+                    item.classList.remove('open');
+                    item.style.maxHeight = null;
+                });
+
+                if (!isOpen) {
+                    answer.classList.add('open');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+
+
     </script>
 </body>
 
