@@ -177,6 +177,88 @@
             font-size: 1rem;
         }
 
+        #contact {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #0099ff, #0056b3);
+            color: white;
+            border-radius: 10px;
+            margin: 2rem auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        #contact p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #e6e6e6;
+        }
+
+        #contact div {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        #contact a {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            border-radius: 50px;
+            background: #ff6b81;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        #contact a:hover {
+            transform: translateY(-5px);
+            background: #ff4757;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #contact a:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        #contact a:nth-child(1) {
+            background: #25d366;
+            /* WhatsApp green */
+        }
+
+        #contact a:nth-child(1):hover {
+            background: #20c057;
+        }
+
+        #contact a:nth-child(2) {
+            background: #0088cc;
+            /* Telegram blue */
+        }
+
+        #contact a:nth-child(2):hover {
+            background: #0077b5;
+        }
+
+        #contact a:nth-child(3) {
+            background: #4267B2;
+            /* Facebook blue */
+        }
+
+        #contact a:nth-child(3):hover {
+            background: #365899;
+        }
+
+
         footer {
             background: #333;
             color: white;
@@ -261,7 +343,7 @@
 
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>We are here to assist you!</p>
+        <p>We are here to assist you! Reach out through any of the platforms below:</p>
         <div>
             <a href="https://wa.me/251940651252" target="_blank">WhatsApp</a>
             <a href="https://t.me/RophGirma" target="_blank">Telegram</a>
@@ -269,6 +351,7 @@
         </div>
     </section>
 
+    
     <footer>
         <p>&copy; 2024 School Management System. All rights reserved.</p>
     </footer>
