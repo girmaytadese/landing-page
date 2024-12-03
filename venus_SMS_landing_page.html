@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fc;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #0056b3, #0099ff);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 0.2px solid gray;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6b81;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            background: white;
+            height: 3px;
+            width: 30px;
+            margin: 4px;
+        }
+
+        .menu-links-mobile {
+            display: none;
+            flex-direction: column;
+            background: #333;
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+
+        .menu-links-mobile a {
+            padding: 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .menu-links-mobile a:hover {
+            background-color: #ff6b81;
+        }
+
+        .show {
+            display: flex !important;
+        }
+
+        #hero {
+            background: linear-gradient(135deg, #0056b3, #0099ff);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        #hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        #hero a {
+            display: inline-block;
+            background: #ff6b81;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            margin: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        #hero a:hover {
+            transform: scale(1.1);
+            background: #ff4757;
+        }
+
+        section {
+            margin: 2rem auto;
+            max-width: 1000px;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #0056b3;
+            margin-bottom: 1rem;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .feature {
+            flex: 1 1 300px;
+            background: #f8f9fc;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            color: #0056b3;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">SMS</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-links-mobile">
+            <a href="#hero">Home</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <h1>Welcome to School Management System</h1>
+        <p>Streamline your school operations efficiently and effectively.</p>
+        <a href="#features">Explore Features</a>
+        <a href="#contact">Get in Touch</a>
+    </section>
+
+    <section id="features">
+        <h2>Key Features</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Student Management</h3>
+                <p>Efficiently handle student profiles, attendance, and academic progress.</p>
+            </div>
+            <div class="feature">
+                <h3>Teacher Management</h3>
+                <p>Manage teacher profiles, schedules, and assignments seamlessly.</p>
+            </div>
+            <div class="feature">
+                <h3>Course Management</h3>
+                <p>Organize course content, assignments, and track student performance.</p>
+            </div>
+            <div class="feature">
+                <h3>Grade Tracking</h3>
+                <p>Track and analyze student grades with detailed reports and analytics.</p>
+            </div>
+            <div class="feature">
+                <h3>Communication Tools</h3>
+                <p>Stay connected with students, teachers, and parents through integrated messaging.</p>
+            </div>
+            <div class="feature">
+                <h3>Customizable Reports</h3>
+                <p>Generate customized reports for insights into academic and administrative performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>We are here to assist you!</p>
+        <div>
+            <a href="https://wa.me/251940651252" target="_blank">WhatsApp</a>
+            <a href="https://t.me/RophGirma" target="_blank">Telegram</a>
+            <a href="https://web.facebook.com/RophGirmaAdi/" target="_blank">Facebook</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 School Management System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu-links-mobile').classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>
